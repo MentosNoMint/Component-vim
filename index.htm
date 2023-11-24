@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    sssm: "300px",
+                    ssm: "400px",
+                    sm: "640px",
+                    md: "768px",
+                    lg: "1024px",
+                    xl: "1280px",
+                    xll: "1536px",
+                    xlll: "1920px",
+                },
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                        grayText: "#999",
+
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .overF {
+                overflow: hidden;
+            }
+        }
+        @layer base {
+            * {
+                @apply m-0 p-0 box-border font-['Roboto'] ;
+            }
+
+            .wrapper {
+                @apply min-h-full overF flex flex-col ;
+            }
+            body,
+            html {
+                height: 100%;
+                background-color: black;
+            }
+        }
+        @layer components {
+          .text-block{
+            @apply text-grayText font-normal text-[13px]
+          }
+          .block-blue-border{
+            @apply rounded-[12px] border-[2px] border-[#5598c0]
+          }
+        }
+    </style>
+    <title>Prototype</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="w-full h-full" id="container">
+            <main>
+                <div class="flex flex-col bg-white rounded-[12px] max-w-[267.824px]">
+                    <div class="mt-[20px] ml-[35px]">
+                        <span class="text-grayText font-normal text-[16px]">Болезнь</span>
+                    </div>
+                    <div class="ml-[23px]">
+                        <span class="text-block">Дата отсутсвия</span>
+                        <div class="block-blue-border max-w-[151px]">
+                            <div class="flex justify-between mx-[7px]">
+                                <span class="text-block">13.06.23</span>
+                                <img src="/img/kalendar-icon.svg" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-[23px]">
+                        <span class="text-block">Время отсутсвия</span>
+                        <div class="block-blue-border max-w-[151px]">
+                            <div class="flex justify-between mx-[7px]">
+                                <span class="text-block">9:00-16:00</span>
+                                <img src="/img/Time-icon.svg" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-[23px]">
+                        <span class="text-block">Способ связи</span>
+                        <div class="block-blue-border max-w-[151px]">
+                            <div class="flex justify-between">
+                                <span class="text-block ml-[7px]">Домашний Телефон</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-[23px]">
+                        <span class="text-block">Причина отсутсвия</span>
+                        <div class="block-blue-border max-w-[213px]">
+                            <div class="flex ">
+                                <span class="text-block text-[10px] ml-[7px]">Заболел ангиной. Фотографии справок
+                                    прилагаются</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-[10px] my-[21px] ">
+                        <div class="flex items-center justify-center rounded-[12px] bg-[#d3dca8] max-w-[90px] py-[8px] px-[9px]">
+                            <span class="text-[12px] text-[#404040]">Согласовать</span>
+                        </div>
+                        <div class="flex items-center justify-center rounded-[12px] bg-[#eb7d7d] max-w-[90px] py-[8px] px-[19px]">
+                            <span class="text-[12px] text-[#404040]">Отказать</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
